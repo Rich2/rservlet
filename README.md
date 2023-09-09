@@ -1,2 +1,2 @@
 # rservlet
-A Hello WOrld Servlet
+A Hello World Servlet
