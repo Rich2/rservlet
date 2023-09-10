@@ -7,12 +7,12 @@
     <display-name>Servlet Number 1</display-name>
     <servlet>  
       <servlet-name>Servlet1</servlet-name>
-    <servlet-class>mypack.ServApp</servlet-class>  
+      <servlet-class>mypack.ServApp</servlet-class>
     </servlet>  
       
     <servlet-mapping>  
-    <servlet-name>Servlet1</servlet-name>  
-    <url-pattern>/welcome</url-pattern>  
+      <servlet-name>Servlet1</servlet-name>
+      <url-pattern>/welcome</url-pattern>
     </servlet-mapping>  
       
-</web-app>  
+</web-app>
