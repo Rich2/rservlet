@@ -1,3 +1,4 @@
+package mypack
 import jakarta.servlet.http.{HttpServlet, HttpServletRequest => HSReq, HttpServletResponse => HSResp}
 
 class ServApp extends HttpServlet
