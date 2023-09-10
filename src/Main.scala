@@ -1,8 +1,8 @@
 import jakarta.servlet.http.{HttpServlet, HttpServletRequest => HSReq, HttpServletResponse => HSResp}
 
-object ServApp extends HttpServlet
+class ServApp extends HttpServlet
 {
-  def html =
+  def html: String =
     """<body>
       |<h1>This is the start!</h1>
       |<p>This is the body.</p>
@@ -10,6 +10,6 @@ object ServApp extends HttpServlet
       |""".stripMargin
   override def doGet(req: HSReq, resp: HSResp): Unit =
   {
-    resp.getWriter().print(html)
+    resp.getWriter().println(html)
   }
-} 
+}
