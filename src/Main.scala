@@ -11,9 +11,9 @@ class ServApp extends HttpServlet
       |<p>This is requst number $numReqs.</p>
       |</body>
       |""".stripMargin
+
   override def doGet(req: HSReq, resp: HSResp): Unit =
-  {
-    val str = req.getMethod
+  { val str = req.getMethod
     numReqs += 1
     resp.getWriter().println(html(str))
   }
