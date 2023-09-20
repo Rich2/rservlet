@@ -1,5 +1,5 @@
 package mypack
-import jakarta.servlet.http.{HttpServlet, HttpServletRequest => HSReq, HttpServletResponse => HSResp}
+import jakarta.servlet.http.{Cookie, HttpServlet, HttpServletRequest as HSReq, HttpServletResponse as HSResp}
 
 class ServApp extends HttpServlet
 {
@@ -15,6 +15,10 @@ class ServApp extends HttpServlet
   override def doGet(req: HSReq, resp: HSResp): Unit =
   { val str = req.getMethod
     numReqs += 1
-    resp.getWriter().println(html(str))
+    val cookies = req.getCookies
+    val str2 = if (cookies == null) "null" else "Yeah " + cookies(0).toString//cookies.toString
+    resp.getWriter().println(html(str + str2))
+    val c = Cookie("Visit", "1")
+    resp.addCookie(c)
   }
 }
