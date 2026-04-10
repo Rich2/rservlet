@@ -1,6 +1,6 @@
 enablePlugins(TomcatPlugin)
 version := "0.0.2snap"
-scalaVersion := "3.7.3"
+scalaVersion := "3.8.3"
 scalaSource := (ThisBuild/baseDirectory).value / "src"
 Compile/scalaSource := (ThisBuild/baseDirectory).value / "src"
 resourceDirectory := (ThisBuild/baseDirectory).value / "res"
